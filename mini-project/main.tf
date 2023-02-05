@@ -32,9 +32,9 @@ resource "aws_instance" "two" {
     Name = "mini_project_2"
   }
 
-# provisioner "local-exec" {
-#  command = "echo [${aws_instance.zero.public_ip}, ${aws_instance.one.public_ip}, ${aws_instance.two.public_ip}] >> /ansible/inventory"
-#}
+ provisioner "local-exec" {
+  command = "echo [${aws_instance.zero.public_ip}, ${aws_instance.one.public_ip}, ${aws_instance.two.public_ip}] >> /ansible/inventory"
+}
 }
 
 
